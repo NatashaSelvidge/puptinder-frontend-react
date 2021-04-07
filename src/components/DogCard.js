@@ -4,7 +4,7 @@ function DogCard({ dog }) {
   console.log(dog);
   return (
     <div>
-      <img src={dog.url} />
+      <img src={dog.image_url} height="100px" width="100px" alt={dog.name} />
       <p>{dog.name}</p>
     </div>
   );
