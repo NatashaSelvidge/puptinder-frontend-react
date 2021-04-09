@@ -1,16 +1,37 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: row;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img {
+  max-height: 200px;
+  max-width: 200px;
+  width: auto;
+  height: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.LikedDogs,
+.DislikedDogs {
+  flex: 1;
+}
+
+.DislikedDogs {
+  background-color: rgb(247, 109, 109);
+}
+
+.LikedDogs {
+  background-color: rgb(46, 153, 199);
+}
+
+.CenterContainer {
+  flex: 2;
+}
+
+.NextUpDog {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .App-header {
@@ -22,10 +43,6 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
