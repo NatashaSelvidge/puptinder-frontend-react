@@ -1,13 +1,24 @@
 import React from "react";
 
-function DogCard({ dog }) {
-  console.log(dog);
-  return (
-    <div>
-      <img src={dog.image_url} height="100px" width="100px" alt={dog.name} />
-      <p>{dog.name}</p>
-    </div>
-  );
+function DogCard({ dog, handleChangeOfHeart }) {
+  let returnVal;
+  if (dog) {
+    
+    returnVal = (
+      <div className="DogCard">
+        <img
+          className={dog.id}
+          onClick={handleChangeOfHeart}
+          src={dog.image_url}
+          alt={dog.name}
+        />
+        <p>{dog.name}</p>
+      </div>
+    );
+  } else {
+    returnVal = <div className="DogCard">"Loading"</div>;
+  }
+  return returnVal;
 }
 
 export default DogCard;
